@@ -1,0 +1,3 @@
+[submodule "src/Fitbit_API"]
+	path = src/Fitbit_API
+	url = https://github.com/orcasgit/python-fitbit

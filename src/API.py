@@ -4,7 +4,7 @@ import os
 
 # Used for Fitbit client API
 import fitbit
-import gather_keys_oauth2 as Oauth2
+from Fitbit_API import gather_keys_oauth2 as Oauth2
 import pandas as pd
 import datetime
 import time
