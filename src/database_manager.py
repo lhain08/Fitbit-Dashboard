@@ -14,7 +14,7 @@ class DatabaseManager:
                     'activities/'+data_type,
                     base_date=date,
                     end_date=end_date,
-                    period=period)['activities-distance']
+                    period=period)['activities-' + data_type]
             if query_type == 'intraday':
                 data = self.client.intraday_time_series(
                     resource='activities/'+data_type,

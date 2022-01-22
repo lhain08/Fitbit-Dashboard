@@ -51,14 +51,3 @@ def authorize_user(CLIENT_ID, CLIENT_SECRET, recursive=False):
 
 def clear_tokens():
     os.remove('tokens.txt')
-
-if __name__ == "__main__":
-    type = str(sys.argv[1])
-    date = str(sys.argv[2])
-    end_date = str(sys.argv[3])
-    CLIENT_ID, CLIENT_SECRET = get_credentials()
-    CLIENT = authorize_user(CLIENT_ID, CLIENT_SECRET)
-    #print("Getting data activities/" + type + " for date {}".format(date))
-    data = CLIENT.time_series('activities/'+type, base_date=date, end_date=end_date)
-    dsum=sum([float(d['value']) for d in data['activities-distance']])
-    print("GOT SUM {} AND AVERAGE {}".format(dsum, dsum/len(data['activities-distance'])))
